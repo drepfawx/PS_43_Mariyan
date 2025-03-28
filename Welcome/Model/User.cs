@@ -28,7 +28,7 @@ namespace Welcome.Model
             this.id = id;
             this.expires = expires;
         }
-        public int Id { get => id; set => id = value; }
+        public virtual int Id { get => id; set => id = value; }
         public DateTime Expires { get => expires; set => expires = value; }
         public string Name { get => name; set => name = value; }
         public string FacultyNumber { get => facultyNumber; set => facultyNumber = value; }
