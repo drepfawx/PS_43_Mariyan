@@ -3,6 +3,7 @@ using DataLayer.Model;
 using Welcome.Others;
 using System;
 using System.Linq;
+using System.Text;
 
 class Program
 {
@@ -32,9 +33,9 @@ class Program
 
             Console.WriteLine("password:");
             string inputPassword = Console.ReadLine();
-
+            string encryptedPassword = Convert.ToBase64String(Encoding.UTF8.GetBytes(inputPassword));
             var user = context.Users
-                              .FirstOrDefault(u => u.Name == inputName && u.Password == inputPassword);
+                              .FirstOrDefault(u => u.Name == inputName && u.Password == encryptedPassword);
 
             if (user != null)
             {
