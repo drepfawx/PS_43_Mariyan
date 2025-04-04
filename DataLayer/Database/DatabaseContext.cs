@@ -9,7 +9,7 @@ using Welcome.Others;
 
 namespace DataLayer.Database
 {
-    class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
